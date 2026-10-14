@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #1f2430 0%, #11131a 100%);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.calculator {
+  width: 320px;
+  border-radius: 20px;
+  padding: 20px;
+  background: #1a1d27;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+  text-align: right;
+  color: #fff;
+  padding: 20px 10px 10px;
+}
+
+.expression {
+  min-height: 20px;
+  font-size: 16px;
+  color: #8a8f9c;
+}
+
+.result {
+  font-size: 44px;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 64px);
+  grid-auto-rows: 64px;
+  gap: 12px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.key {
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background: #2b2f3b;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.key:hover {
+  background: #383d4c;
+}
+
+.key:active {
+  transform: scale(0.95);
+}
+
+.key.operator {
+  background: #3a3f4f;
+  color: #f5a623;
+}
+
+.key.equals {
+  background: #f5a623;
+  color: #1a1d27;
+  font-weight: 700;
+}
+
+.key.zero {
+  grid-column: span 2;
+  width: 140px;
+  border-radius: 32px;
+}
